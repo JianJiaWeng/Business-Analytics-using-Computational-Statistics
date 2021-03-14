@@ -47,3 +47,6 @@ plot(density(ages))
 ### (c) boxplot+stripchart
 boxplot(ages)
 stripchart(ages,add = TRUE)
+
+
+   
