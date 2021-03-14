@@ -1,0 +1,49 @@
+#Info
+##title: "HW2"
+##author: '109078704'
+##date: "2021/03/01"
+
+
+#Read data from file
+customers <- read.table(file = "customers.txt", header =TRUE)
+ages <- customers$age
+length(ages)
+
+
+#Answer for the Homework 2
+##Q1: 5th elements
+ages[5]
+
+##Q2: fifth lowest age
+sorted_ages <- sort(ages)
+sorted_ages[5]
+
+##Q3: five lowest ages together
+sorted_ages[1:5]
+
+##Q4: average age
+mean_ages <- sum(ages) / length(ages)
+mean_ages
+
+##Q5: decreasing order five highest ages
+five_lowest_dist <- sort(sorted_ages, decreasing=TRUE)[c(1:5)]
+five_lowest_dist
+
+##Q6: standard deviation of ages
+sd(ages)
+
+##Q7: age_diff, with the difference between each age and the mean age
+age_diff <- ages - mean(ages)
+age_diff
+
+##Q8: Average “difference between each age and the mean age”
+mean(age_diff)
+
+##Q9: (a) histogram, (b) density plot, (c) boxplot+stripchart
+### (a) histogram
+hist(ages)
+### (b) density plot
+plot(density(ages))
+### (c) boxplot+stripchart
+boxplot(ages)
+stripchart(ages,add = TRUE)
